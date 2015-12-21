@@ -1,5 +1,11 @@
 #!/bin/bash -e
 
+sudo apt-get clean
+sudo mv /var/lib/apt/lists /tmp
+sudo mkdir -p /var/lib/apt/lists/partial
+sudo apt-get clean
+sudo apt-get update
+
 echo "================ Installing gradle ================="
 sudo wget https://services.gradle.org/distributions/gradle-2.3-all.zip
 unzip -qq gradle-2.3-all.zip -d /usr/local && rm -f gradle-2.3-all.zip
@@ -16,7 +22,7 @@ tar xzf apache-ant-1.9.6-bin.tar.gz -C /usr/local && rm -f apache-ant-1.9.6-bin.
 echo 'export ANT_HOME=/usr/local/apache-ant-1.9.6' >> $HOME/.bashrc
 echo 'export PATH=$PATH:/usr/local/apache-ant-1.9.6/bin' >> $HOME/.bashrc
 
-for file in /tmp/version/*;
+for file in /u14jav/version/*;
 do
   $file
 done
