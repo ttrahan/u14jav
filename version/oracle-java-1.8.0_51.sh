@@ -2,7 +2,7 @@
 
 echo "================ Installing oracle-java8-minor-release ================="
 echo oracle-java8-minor-release shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-mkdir /opt/jdk
+mkdir -p /opt/jdk
 cd /opt
 wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-linux-x64.tar.gz
 tar -zxf jdk-8u51-linux-x64.tar.gz -C /opt/jdk
