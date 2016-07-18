@@ -19,7 +19,7 @@ ln -fs /usr/local/apache-maven-3.2.5/bin/mvn /usr/bin
 echo 'export PATH=$PATH:/usr/local/apache-maven-3.2.5/bin' >> $HOME/.bashrc
 
 echo "================ Installing apache-ant-1.9.6 ================="
-wget http://mirror.cogentco.com/pub/apache//ant/binaries/apache-ant-1.9.6-bin.tar.gz
+wget http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.6-bin.tar.gz
 tar xzf apache-ant-1.9.6-bin.tar.gz -C /usr/local && rm -f apache-ant-1.9.6-bin.tar.gz
 ln -fs /usr/local/apache-ant-1.9.6/bin/ant /usr/bin
 echo 'export ANT_HOME=/usr/local/apache-ant-1.9.6' >> $HOME/.bashrc
@@ -29,4 +29,3 @@ for file in /u14jav/version/*;
 do
   $file
 done
-
