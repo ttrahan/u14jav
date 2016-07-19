@@ -6,11 +6,11 @@ python:
 build:
   pre_ci:
     # Always pull the latest base image to avoid any cached images on the host
-    #- docker pull drydock/u14:prod
-    - docker build --rm -t ttrahan/u14jav:tip .
+    - docker pull drydock/u14:prod
+    - docker build --rm -t ttrahan/u14jav-custom-minor:tip .
 
   pre_ci_boot:
-    image_name: ttrahan/u14jav
+    image_name: ttrahan/u14jav-custom-minor
     image_tag: tip
     pull: false
 
@@ -19,7 +19,7 @@ build:
     - /u14jav/test/_java.sh
 
   on_success:
-    - if [ "$IS_PULL_REQUEST" != true ]; then docker push ttrahan/u14jav:tip; fi
+    - if [ "$IS_PULL_REQUEST" != true ]; then docker push ttrahan/u14jav-custom-minor:tip; fi
 
 integrations:
   hub:
