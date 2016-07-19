@@ -6,3 +6,4 @@ mkdir -p /usr/lib/jvm/oracle-java-1.8.0_91
 cd /usr/lib/jvm
 wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.tar.gz
 tar -zxf jdk-8u91-linux-x64.tar.gz -C /usr/lib/jvm/oracle-java-1.8.0_91
+update-alternatives --set java /usr/lib/jvm/oracle-java-1.8.0_91/jre/bin/java
