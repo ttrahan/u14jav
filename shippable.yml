@@ -23,5 +23,5 @@ build:
 
 integrations:
   hub:
-    - integrationName: "dockerhub"
+    - integrationName: "ttrahan-dh"
       type: "docker"
