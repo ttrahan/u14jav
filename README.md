@@ -1,9 +1,8 @@
-u14jav
+u14jav-custom-minor
 ===============
 
-Shippable CI image for Java on Ubuntu 14.04. Available jdk versions:
+Based on Shippable CI image for Java on Ubuntu 14.04, this build includes additional minor versions as specified within the /version directory.
 
-1. openjdk6
-2. openjdk7
-3. oraclejdk7
-4. oraclejdk8
+For an example of using this image and running matrix builds against each available version, see the matrix branch of the maven-example project here:
+
+https://github.com/ttrahan/maven-example/tree/matrix
